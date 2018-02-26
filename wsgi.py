@@ -10,7 +10,7 @@ def hello():
 
     writeInLog("log")
     string = logToString("log")
-    return "Salut Monde! Greetings from "+socket.gethostname()+"\n"+string+"\n"
+    return "Salut Monde! Greetings from "+socket.gethostname()+"\n\n"+string+"\n"
 
 
 if __name__ == "__main__":
