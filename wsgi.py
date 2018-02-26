@@ -10,7 +10,8 @@ def hello():
 
     writeInLog("log")
     string = logToString("log")
-    return "Salut Monde! Greetings from "+socket.gethostname()+"\n\n"+string+"\n"
+    finalString = "Salut Monde! Greetings from "+socket.gethostname()+"\n"+string+"\n"
+    return finalString
 
 
 if __name__ == "__main__":
@@ -24,4 +25,6 @@ def writeInLog(logfile):
 
 def logToString(logfile):
     file = open(logfile, "r")
-    return file.read()
+    string = file.read()
+    file.close()
+    return string
