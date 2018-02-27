@@ -8,14 +8,12 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
 
-    log = ""
-
     try:
         write_in_log("/mnt/log/logs/log.txt")
         log = log_to_string("/mnt/log/logs/log.txt")
 
     except Exception as e:
-        print(e)
+        return e
 
     hello_world = "Hello World ! <br><br>"
     final_string = hello_world+log
