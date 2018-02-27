@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
 
 def write_in_log(logfile):
-    file = open(logfile, "a")
+    file = open(logfile, "w")
     file.write("Host: "+socket.gethostname()+"  Timestamp: {:%Y-%m-%d %H:%M:%S}".format(datetime.datetime.now())+"<br>")
     file.close()
 
