@@ -8,7 +8,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
 
-    write_in_log("log.txt")
+    write_in_log("/mnt/log/logs/log.txt")
     log = log_to_string("log.txt")
     hello_world = "Hello World ! <br><br>"
     final_string = hello_world+log
