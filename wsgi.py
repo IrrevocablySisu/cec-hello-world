@@ -10,7 +10,7 @@ def hello():
 
     write_in_log("log.txt")
     log = log_to_string("log.txt")
-    hello_world = "Hello World!\n"
+    hello_world = "Hello World !\n"
     final_string = hello_world+log
 
     return final_string
